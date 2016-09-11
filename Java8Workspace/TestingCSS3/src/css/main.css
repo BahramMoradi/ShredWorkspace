@@ -1,0 +1,86 @@
+/*
+Universal selector. it is used to reset the browser default values.
+
+*{
+    margin: 0px;
+    padding: 0px;
+} */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.profile-box{
+    position: static;
+    width:100%;
+    height: 600px;
+    background-color:#8Da9cf;
+    background-image:url(../dogs.jpg) ;
+    background-repeat: no-repeat;
+    /*background-position: 50% 50% */
+    background-size: 100% 600px;
+    /*border: 1px solid #888888; */
+    box-shadow: 1em 1em .5em -.5em rgba(0, 0, 0, 0.3);
+}
+.profile-photo {
+    width: 600px;
+    min-height: 600px;
+    position: relative;
+    top: 30%;
+    left:30px;
+    /*background-color: #fff; */
+    background: url(../hund.jpg) no-repeat center;
+    border: 1px solid #777;
+    border-radius: 50%;
+    box-shadow: 1em 1em .5em -.5em rgba(0, 0, 0, 0.3);
+}
+.name{
+    font-size: 32px;
+    min-width: 200px;
+    min-height: 100px;
+    position: relative;
+    text-align: left;
+    top: 30%;
+    left: 330px;
+}
+.content{
+    position: relative;
+    top:240px;
+    bottom: 100px;
+    left: 330px;
+    padding-bottom: 80px;
+    width: 60%;
+    text-align: left;
+    /*border: 1px solid #777;*/
+}
+footer{
+    position: fixed;
+    width:100%;
+    height: 50px;
+    bottom: 0px;
+    background-color: #b3d4fc;
+    text-align: center;
+    padding: 5px;
+    font-size:22px;
+}
+
+abbr[title]{
+    border-bottom: 1px dotted #999;
+}
+abbr[title]:hover {
+    cursor: help;
+    background-color: #ffff00;
+}
+
+
+
+
+
+
+#nav{
+    margin-top: 60px;
+}
+#nav > li {
+    background: url(../tile.png) no-repeat left top;
+    padding-left: 20px;
+    text-decoration: none;
+    }

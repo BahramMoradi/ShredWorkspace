@@ -1,0 +1,21 @@
+package com.netcompany.dataextractor;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Database {
+	static final String USER="";
+	static final String PASSWORD="";
+	static final String DATABASE="";
+	static final String URL="";
+	static final String DRIVER="com.microsoft.jdbc.sqlserver.SQLServerDriver";
+	
+	public Connection connect() throws ClassNotFoundException, SQLException{
+		Class.forName(DRIVER);
+		Connection conn=DriverManager.getConnection(URL,USER,PASSWORD);
+		return conn;
+	}
+	
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Setup</title>
+  </head>
+  <body>
+    <h1>How to setup development environment</h1>
+    <p>
+      <h2>Softwares</h2>
+      <ul>
+        <li>Atom</li>
+        <li>GIT</li>
+        <li>node.js</li>
+        <li>browser-sync</li>
+      </ul>
+    </p>
+
+
+      <h2>Github repository</h2>
+        <p>
+      <ul>
+        <li>Create a GitHub account at <a href="https://github.com">https://github.com</a></li>
+        <li>Create a repository </li>
+        <li>Go to created repository settings and find GitHub pages</li>
+        <li>for Source section chose master-branch and save it</li>
+      </ul>
+    </p>
+    <h2>GIT</h2>
+    <ul>
+      <li>in your computer create a folder somewhere</li>
+      <li>Go to the github repositry and copy the clone link of your created repository </li>
+      <li>Open cmd (command line prompet) and navigate to the created folder on your computer</li>
+      <li>Write <code>git clone paste_url_to_your_repository</code> and press enter</li>
+      <li>change dirctory (cd) to downloaded repository in yor folder </li>
+      <li>Now write <code>atom . </code> to open atom IDE in the current project(or folder)</li>
+      <li>Right click on the folder and create new file call it index.html</li>
+      <li>In the index.html file write html and the atom ide will suggest a compilation , enter</li>
+      <li>write some text</li>
+    </ul>
+    <h2>push to remote repository</h2>
+    <li>open cmd and go to the repository folder</li>
+    <li>write <code> git status </code> and enter. you can se the newly created but untracked files in green color</li>
+    <li>write <code>git add . </code> to add all created file to be tracked </li>
+    <li>write <code>git commit -m "message"</code> to commit the file to local repository</li>
+    <li>To commit to github repository you need to run <code>git push</code> : this command ask you for user name and password of your github account , go ahead and give it the required informations</li>
+    <li>Now your github repository is updatted , you can go to your repository settings on git hub and find the url for the project </li>
+
+<h2>using browser-sync</h2>
+<p>
+  To see the outcome of the change we make to the pages dirctly on the browser, the browser-sync is used.<br>
+  Here is the instruction:
+  <ul>
+    <li>Open cmd and go to your project folder</li>
+    write and execute following command<br>
+    <code>browser-sync start --server --dirctory --files "**/*"</code> <br>
+    The command start browser sync in server mode (serve up all file in particular dirctory) the --dirctory mode( if it cant find a file the server stil shows a poge with dictory structure )<br>
+     --files ( which files watch for changes. if any of thoes files changes though it shows the change on the browser ).<br>
+     "**/*" : The first two stars means any dirctory the browser-sync can find and the last star means any files in thoes dirctories.
+
+  </ul>
+
+
+</p>
+
+
+
+
+  </body>
+</html>

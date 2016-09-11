@@ -1,0 +1,48 @@
+package controllers;
+
+import play.mvc.*;
+
+import views.html.*;
+
+/**
+ * This controller contains an action to handle HTTP requests
+ * to the application's item page.
+ */
+public class ItemController extends Controller {
+    public Result createItem(){
+		return null;
+	}
+    /**
+     * Method: POST
+     * URL: /saveItem
+     * @return
+     */
+    public Result saveItem() {
+        return ok(index.render("Your new application is ready."));
+    }
+    /**
+     * Method: POST
+     * URL: /deleteItem/iid
+     * @return
+     */
+    public Result deleteItem(){
+    	return null;
+    }
+    /**
+     *Method: POST
+     *URL : /updateItem
+     * @return
+     */
+    public Result updateItem(){
+    	return null;
+    }
+    /**
+     * Method :GET
+     * URL : /listItem
+     * @return
+     */
+    public Result listItem(){
+    	return null;
+    }
+
+}

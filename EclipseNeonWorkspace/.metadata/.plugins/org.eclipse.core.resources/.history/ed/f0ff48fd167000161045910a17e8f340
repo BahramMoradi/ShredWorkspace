@@ -1,0 +1,16 @@
+package com.netcompany.test;
+
+import java.util.Arrays;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		String str="%s,%s";
+	  System.err.println(String.format(str, "a","b"));
+		
+
+	}
+
+}

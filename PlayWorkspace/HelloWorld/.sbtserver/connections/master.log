@@ -1,0 +1,13 @@
+New log file opened at Wed Sep 07 10:24:05 CEST 2016 by 8220@T440PW10BAM
+Taking next connection to: 63448
+New client attempting to connect on port: 63449-63448
+  Address = /192.168.65.125:63448
+This client on port 63449 has uuid 269f4b2d-9a7f-4d9a-9f3c-10d1908115d6 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-269f4b2d-9a7f-4d9a-9f3c-10d1908115d6
+Taking next connection to: 63448
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 8220@T440PW10BAM logs at Wed Sep 07 10:27:05 CEST 2016, goodbye.

@@ -1,0 +1,19 @@
+package com.netcompany.dataextractor;
+
+import java.io.IOException;
+import java.util.stream.Stream;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		String path="C:\\Users\\BAM\\Documents\\EclipseNeonWorkspace\\DataExtraction\\src\\test\\resources\\test.txt";
+	FileParser parser=new FileParser();
+	 Stream<String> lines=parser.ReadAllLines(path);
+	 lines.forEach(line->{
+		 String[] tokkens=line.split(",");
+		 System.out.println(tokkens[4].substring(0,2));
+		 });
+
+	}
+
+}

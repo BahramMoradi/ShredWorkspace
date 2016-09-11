@@ -1,0 +1,13 @@
+New log file opened at Fri Sep 09 08:31:12 CEST 2016 by 8696@T440PW10BAM
+Sending msg to client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef.log))
+Sending msg to client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\master.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef: BackgroundJobStarted(5,BackgroundJobInfo(1,backgroundRun,AttributeKey[sbt.BackgroundJobHandle]("backgroundRun") in Scope(Build: file:/C:/Users/BAM/Documents/Workspaces/PlayWorkspace/Shop/, , Project: ProjectReference(file:/C:/Users/BAM/Documents/Workspaces/PlayWorkspace/Shop/,root), Config: compile)))
+Sending msg to client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef: (3,ReceivedResponse())
+Client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-2ab0e708-60fc-47a1-9f90-2b53dd18c3ef

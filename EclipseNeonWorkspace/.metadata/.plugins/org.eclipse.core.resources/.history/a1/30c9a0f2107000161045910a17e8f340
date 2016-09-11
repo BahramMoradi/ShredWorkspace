@@ -1,0 +1,14 @@
+package com.netcompany.test;
+
+import java.util.Arrays;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Arrays.asList("A","BC","CDE","DEFG")
+		.stream().map(s->s.length()).forEach(System.out::println);
+		
+
+	}
+
+}

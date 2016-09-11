@@ -1,0 +1,172 @@
+package com.netcompany.dataextractor;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Stream;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
+
+public class ParserUtil {
+	public enum Headers{
+		CPR,STATUS,OPRETTET,BREVE,ANDRE_COLUMN,ANDRE_COLUMN_VEARDI
+	}
+	static char A_SEP='@';
+	static char C_SEP=';';
+	static char COMA_SEP=',';
+	static String BASE_FOLDER="C:\\Users\\BAM\\Desktop\\files\\";
+	static String FTM_FOLDER=BASE_FOLDER+"breve";
+	static String BREVE_TXT=BASE_FOLDER+"breve.txt";
+	static String RESULT_FOLDER=BASE_FOLDER+"result\\";
+	
+	public static void main(String[] args) throws IOException {
+	ParserUtil parser=new ParserUtil();
+	String a="290894-1791";
+	String b="290894-1791";
+	//System.out.println(a.compareTo(b));
+	parser.parse();
+	//String str="050492-1298";
+	//System.out.println(str.substring(0,6)+str.substring(7));
+	}
+	
+	public void parse() throws IOException{
+		// list all files in breve folder .FTM
+		
+		
+		File all = new File(FTM_FOLDER);
+		File [] files=all.listFiles();
+		
+	
+	
+		// parse brev.txt
+		Reader in=new FileReader(BREVE_TXT);
+		Iterable<CSVRecord> breveTxtrecords=CSVFormat.newFormat(A_SEP).withHeader(Headers.class).parse(in);
+		
+		/**
+		 * 1- create result file 
+		 * 2- check hver enste BREVXXX.FTM 
+		 */
+		for(File file: files){
+			// for hver BREVXXX.FTM create a result file
+			String resultFile=RESULT_FOLDER+file.getName().replace("BREV", "RESULT");
+			File res=new File(resultFile);
+			if(res.exists()){
+				/**
+				 * hvis result filen existerer så delete vi den og lave en ny en
+				 */
+				res.delete();
+				//create new file
+				res.createNewFile();
+			}
+			else{
+				res.createNewFile();
+			}
+			
+			
+			List<String> cprTextList=new ArrayList<>();
+			for(CSVRecord record: breveTxtrecords){
+				String brevTxtCPR=record.get(Headers.CPR);
+				cprTextList.add(brevTxtCPR.substring(0,6)+brevTxtCPR.substring(7));
+				}
+			
+			
+			
+			 checkFTM(file, cprTextList);
+			
+			
+		}
+	} 
+	
+	public void checkFTM(File breveFTM,List<String> brevCprList) throws IOException{
+		System.out.print("Tjeck file : "+breveFTM.getName());
+		int startIndex=8+43+34+34+34+34+34+8;
+		Stream<String> lines= Files.lines(Paths.get(breveFTM.getAbsolutePath()));  //read FTM file
+		Iterator<String> itr=lines.iterator();
+		List<String> ftmCprList=new ArrayList<>();
+		while(itr.hasNext()){
+			String line=itr.next();
+			String ftmCPR=line.substring(startIndex, startIndex+11);
+			ftmCprList.add(ftmCPR.substring(0,6)+ftmCPR.substring(7));
+		}
+		/**
+		for(String cpr: ftmCprList){
+			if(brevCprList.contains(cpr)){
+				//System.out.println("brev.txt inholder ikke CPR :"+cpr);
+			}else{
+				System.out.println("brev.txt inholder ikke CPR :"+cpr);
+			}
+		}**/
+		for(String cpr: ftmCprList){
+			boolean exist=false;
+			for(String brevCPR:brevCprList){
+				if(cpr.compareTo(brevCPR)==0){
+					exist=true;
+				}
+			}
+			if(!exist){
+				System.out.println("brev.txt inholder ikke CPR :"+cpr);
+			}
+		}
+		
+		
+		
+		/**
+		while(itr.hasNext()){
+			String line=itr.next();
+			String ftmCPR=line.substring(startIndex, startIndex+11);
+			if(!existsInBreveTxt(ftmCPR,records)){
+				//print(breveFTM.getName(),ftmCPR);
+				writeToResultFile(RESULT_FOLDER+breveFTM.getName().replace("BREV","RESULT"), ftmCPR);
+				print( breveFTM.getName(), "CPR.nr "+ftmCPR+" findes ikke i breve.txt");
+				
+			}
+			
+		}**/
+		
+		
+	}
+	public boolean existsInBreveTxt(String ftmCPR,Iterable<CSVRecord> records){
+		boolean exsits=false;
+		
+		for(CSVRecord record: records){
+			String brevTxtCPR=record.get(Headers.CPR);
+			
+			System.out.println("breveTxtCPR: "+brevTxtCPR+"  "+ftmCPR);
+			if(brevTxtCPR.equals(ftmCPR)){
+				System.out.println("Fandt: breveTxtCPR: "+brevTxtCPR+"  "+ftmCPR);
+				exsits=true;
+				break;
+			}
+		}
+		
+		
+		return exsits;
+	}
+	
+	public void writeToResultFile(String filePath, String what) throws IOException{
+		PrintWriter pw = new PrintWriter(new FileWriter(filePath));
+		pw.append(what);
+		pw.close();
+	
+	}
+	public void print(String ftmfile,String cpr){
+		System.out.println("================================================================");
+		System.out.println(ftmfile);
+		System.out.println("CPR: "+cpr);
+	}
+	
+	
+
+	
+
+}

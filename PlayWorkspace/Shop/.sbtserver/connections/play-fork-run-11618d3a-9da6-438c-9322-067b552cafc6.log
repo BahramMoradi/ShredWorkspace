@@ -1,0 +1,15 @@
+New log file opened at Fri Sep 09 08:36:11 CEST 2016 by 8696@T440PW10BAM
+Sending msg to client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\master.log))
+Sending msg to client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6: BackgroundJobStarted(5,BackgroundJobInfo(1,backgroundRun,AttributeKey[sbt.BackgroundJobHandle]("backgroundRun") in Scope(Build: file:/C:/Users/BAM/Documents/Workspaces/PlayWorkspace/Shop/, , Project: ProjectReference(file:/C:/Users/BAM/Documents/Workspaces/PlayWorkspace/Shop/,root), Config: compile)))
+Sending msg to client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6: (3,ReceivedResponse())
+Client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6 closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6 thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6
+Dropping message BackgroundJobLogEvent(1,LogMessage(info,Stopping Play fork run ...)) to dead client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6
+Dropping message BackgroundJobLogEvent(1,LogMessage(info,application - ApplicationTimer demo: Stopping application at 2016-09-09T08:57:11.338Z after 156754s.)) to dead client play-fork-run-11618d3a-9da6-438c-9322-067b552cafc6

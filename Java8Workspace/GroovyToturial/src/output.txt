@@ -1,0 +1,3 @@
+Hello world Groovy io 
+Write to a file: new File("output.txt").text="line two " 
+Read from a file new File("output.txt").eachLine{ line ->...}

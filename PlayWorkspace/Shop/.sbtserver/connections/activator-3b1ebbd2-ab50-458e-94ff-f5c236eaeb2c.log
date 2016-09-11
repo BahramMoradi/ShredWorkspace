@@ -1,0 +1,9 @@
+New log file opened at Wed Sep 07 14:27:05 CEST 2016 by 8696@T440PW10BAM
+Sending msg to client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\master.log))
+Sending msg to client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\master.log))
+Sending msg to client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\BAM\Documents\Workspaces\PlayWorkspace\Shop\.sbtserver\connections\activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c.log))
+Reading next message from client.
+Client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c EOF, shutting down.
+Stopping client.
+Dropping message (0,ReceivedResponse()) to dead client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c
+Client activator-3b1ebbd2-ab50-458e-94ff-f5c236eaeb2c thread exiting.
