@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>power</title>
+</head>
+
+<body>
+    <h1>Useful powershell commands</h1>
+
+    <h2>Finding </h2>
+    <ul>
+        <li><code>ls -Recurse -ErrorAction SilentlyContinue | Where-Object{$_.Name -like '*.java'}</code></li>
+        <li><code>ls -Recurse -ErrorAction SilentlyContinue *.java</code></li>
+    </ul>
+    <h2>Creating, reading and writing files</h2>
+    <ul>
+        <li><code>New-Item test.txt</code></li>
+        <li><code>Add-Content 'test.txt' 'The Message'</code></li>
+        <li><code>Get-Content test.txt</code></li>
+        <li><code>Get-ChildItem -recurse | Select-String -pattern "message" | group path | select name</code></li>
+    </ul>
+
+
+</body>
+
+</html>
