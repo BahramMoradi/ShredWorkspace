@@ -1,0 +1,50 @@
+body{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+nav{
+  width: 60%;
+  position: fixed;
+  top:0px;
+  background-color:#000;
+  text-align: center;
+}
+nav a{
+  color: #FFF;
+  text-decoration: none;
+  margin: 10px;
+}
+#text{
+  height: 80%;
+
+}
+#console{
+ height: 400px;
+ background-color: #000;
+ color:#FFF;
+ padding: 10px;
+ font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  margin: 0 0 14px;
+  overflow-y: scroll;
+  /*line-height: 80%;*/
+}
+footer{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  background-color: #00F;
+  color: #FFF;
+  position: fixed;
+  bottom: 0;
+
+}
+dl dt{
+  color: #0F0;
+  font-size: 20px;
+}
+dl dd{
+
+}
