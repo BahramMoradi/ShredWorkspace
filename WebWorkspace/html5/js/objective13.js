@@ -26,9 +26,42 @@ window.onload = function () {
 
  }*/
 
+
+
+
+
+
+ document.getElementById('displayBtn').onclick=function(){
+ if(document.getElementById('displayHideShowBox').style.display=='' ||
+  document.getElementById('displayHideShowBox').style.display=='block'){
+     document.getElementById('displayHideShowBox').style.display='none';
+
+   }else{
+         document.getElementById('displayHideShowBox').style.display='block';
+   }
+
+ }
+
+
+
+
+ document.getElementById('visibilityBTN').onclick=function(){
+   if(document.getElementById('visibilityBox').style.visibility =='hidden'){
+     document.getElementById('visibilityBox').style.visibility ='visible';
+
+   }else{
+      document.getElementById('visibilityBox').style.visibility ='hidden';
+       console.log( document.getElementById('visibilityBox').style.visibility);
+   }
+ }
+
+
+
 }
 
-
+function showOrHideJquery(){
+  $('#displayHideShowBox').toggle(2000);
+}
 
 function rotateBox(event){
    document.getElementById('box1').style.transform= 'rotate('+event.target.value+'deg)';
@@ -85,6 +118,9 @@ function skewBox(){
   var box=document.getElementById('skewBox');
   box.style["transform"] = "skew("+x+"deg," +y+ "deg)";
 }
+
+
+
 
 /*
 var x=0;

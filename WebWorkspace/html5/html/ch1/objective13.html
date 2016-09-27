@@ -227,10 +227,73 @@ transform: translate(50px,0px) scale(1.5) skew(10deg, 10deg);</code> In this cod
      var box=document.getElementById('combinedTransform');
      box.style.transform='translate('+tx+'px,' + ty + 'px) scale('+xs+','+ys+') skew('+xskew+'deg,'+yskew+'deg)';
 }
- </pre></code>
+      </pre></code>
         <div class="box" id="combinedTransform">
             combined
         </div>
+    </div>
+    <div class="section">
+        <h1>Showing and hiding elements</h1>
+        <p>
+            You can show and hide elements declaratively in the HTML markup or programmatically by modifying the object’s CSS properties through JavaScript. You can create the CSS properties that show or hide an element directly in an object’s style property or in
+            a CSS style, and it is added to the element’s style collection.
+        </p>
+        <h2>Using <i>display</i> property</h2>
+        <p>
+            <i>display property </i> accepts two possible values. A value of <i>inline</i> tells the browser to <i>show</i> the item, while a value of <i>none</i> means the browser should <i>hide</i> the item. Notice that by using <i>display</i> property
+            the element palce is not preserved in the layout.
+            <code><pre>
+              document.getElementById('displayBtn').onclick=function(){
+              if(document.getElementById('displayHideShowBox').style.display=='' ||
+               document.getElementById('displayHideShowBox').style.display=='block'){
+                  document.getElementById('displayHideShowBox').style.display='none';
+
+                }else{
+                      document.getElementById('displayHideShowBox').style.display='block';
+                }
+
+              }
+            </pre></code>
+        </p>
+        <button type="button" name="button" class="hideAndShowBTN" id="displayBtn">Hide or Show</button>
+        <div class="box" id="displayHideShowBox">
+            Hide and Show using <i>display</i>
+        </div>
+        <h2>Using <em>visibility</em> property</h2>
+        <p>
+            The second property available for controlling element visibility is called visibility. This property accepts four possible values, as outlined below:
+        </p>
+        <dl class="">
+            <dt><i>visible</i></dt>
+            <dd>Sets the property to visible to show the element</dd>
+            <dt><i>hidden</i></dt>
+            <dd>Hides the element</dd>
+            <dt><i>colapse</i></dt>
+            <dd>Collapses the element where applicable, such as in a table row</dd>
+            <dt><i>inherite</i></dt>
+            <dd>Inherits the value of the visibility property from the parent</dd>
+        </dl>
+        <p>
+            <code><pre>
+            document.getElementById('visibilityBTN').onclick=function(){
+              if(document.getElementById('visibilityBox').style.visibility =='hidden'){
+                document.getElementById('visibilityBox').style.visibility ='visible';
+
+              }else{
+                 document.getElementById('visibilityBox').style.visibility ='hidden';
+                  console.log( document.getElementById('visibilityBox').style.visibility);
+              }
+            }
+
+          </pre></code>
+        </p>
+        <button type="button" class="hideAndShowBTN" id="visibilityBTN">Hide or Show</button>
+        <div class="box" id="visibilityBox">
+            Using <i>visibility</i> property
+
+
+        </div>
+
 
 
 
@@ -238,6 +301,8 @@ transform: translate(50px,0px) scale(1.5) skew(10deg, 10deg);</code> In this cod
 
 
     <script src="../../js/objective13.js" type="text/javascript">
+    </script>
+    <script src="../../js/jquery-3.1.0.js" type="text/javascript">
     </script>
 </body>
 

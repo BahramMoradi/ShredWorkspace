@@ -52,6 +52,11 @@ dl{
   height: 100px;
   width: 100px;
   background: green;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 input, select{
   width: 200px;
@@ -74,4 +79,9 @@ input#btnPosition:hover{
   -ms-transform:translate(0px,-100px);
   -o-transform:translate(0px,100px);
   transform:translate(0px,-100px);
+}
+.hideAndShowBTN{
+  margin-top: : 20px;
+  margin-bottom: 20px;
+
 }
